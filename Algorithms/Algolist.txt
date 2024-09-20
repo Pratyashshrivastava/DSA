@@ -1,0 +1,8 @@
+8. Sliding Window: longest or shortest substring pattern
+7. subset pattern: write all the possible subset, BFS
+6. Binary Search / modified binary search:  
+5. Top K elements: max stack or Heap
+4. DFS of a binary tree: with recursive soln
+3. Topological Sort: directed acyclic graph
+2. Binary tree BFS: using Queue DS
+1. Two pointer pattern
