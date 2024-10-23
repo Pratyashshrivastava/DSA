@@ -1,0 +1,86 @@
+def isPalindrome(s):
+    s = s.replace(" ","").lower()
+    return s==s[::-1]
+# print(isPalindrome("Nitin nitin"))
+
+def countCharsinStr(s):
+    counter = {}
+    for i in s:
+        counter[i] = 1 + counter.get(i,0)
+    for key, value in counter.items():
+        print([key, value])
+    return
+# countCharsinStr("Hello")
+
+def countWordsinStr(s):
+    words= list(map(str,s.split()))
+    print(len(words))
+    # counter = {}
+    # for i in s:
+    #     counter[i] = 1 + counter.get(i,0)
+    # for key, value in counter.items():
+    #     print([key, value])
+    # return
+# countWordsinStr("Hello I am Kush")
+
+def reverseWordinStr(s):
+    ans = ""
+    words = list(map(str,s.split()))
+    for wrd in words:
+        ans += wrd[::-1].lower() + " "
+    return ans[:len(ans)-1]
+# print(reverseWordinStr("Hello I am Kush"))
+
+def countingInStr(s):
+    Vow = ['a','e','i','o','u']
+    vowels = []
+    cons = []
+    spaces = len(list(map(str,s.split())))-1
+    for i in s.replace(" ",""):
+        if i.lower() in Vow:
+            vowels.append(i)
+        else:
+            cons.append(i)
+    return "Vowels " + str(len(vowels)) + " Consonents "+ str(len(cons)) + " Spaces "+ str(spaces)
+# print(countingInStr("Hello I am Pratyash"))
+
+# print(ord(' '))
+
+def removeAllVowelsFromStr(s):
+    Vow = ['a','e','i','o','u']
+
+    res= ""
+    for i in s:
+        if i not in Vow:
+            res+=i
+    return res
+# print(removeAllVowelsFromStr("This is a temp"))
+
+def removeCharExceptAplha(s):
+    res = ""
+    for i in s:
+        if ord(i) in range(65,90) or ord(i) in range(97,122) or ord(i) == 32:
+            res+=i
+    return res
+# print(removeCharExceptAplha("This is #asda56"))
+
+def removeBrackets(s):
+    res = ""
+    for i in s:
+        # print(i=="(")
+        if i not in ("(",")"):
+            res+=i
+    return res
+# print(removeBrackets("(a+b=c)"))
+
+def sumNuminStr(s):
+    temp =""
+    ans = 0
+    for ch in s:
+        if ch.isdigit():
+            temp+=ch
+        else:
+            ans+=int(temp)
+            temp=""
+    return ans+int(temp)
+print(sumNuminStr('123+300'))
